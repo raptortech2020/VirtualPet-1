@@ -33,7 +33,7 @@ function draw() {
 
 if (keyDown("UP_ARROW"))
 {
-  writestock(food);
+  writeStock(food);
   happy_dog.visible = true;
   dog.visible = false;
 
