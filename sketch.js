@@ -1,6 +1,6 @@
 var dog,dog_img;
 var happy_dog,happy_dog_img;
-var foodS,foodStock,served;
+var food,foodStock,served;
 var database;
 
 function preload()
@@ -42,7 +42,7 @@ if (keyDown("UP_ARROW"))
 
  textSize(20);
  fill("white");
- text("Remaining Milk Bottles: "+foodS,100,75);
+ text("Remaining Milk Bottles: "+food,100,75);
  text("Note: Press up arrow key to feed dog",100,50);
    //add styles here
 }
