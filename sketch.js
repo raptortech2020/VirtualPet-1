@@ -33,7 +33,7 @@ function draw() {
 
 if (keyDown("UP_ARROW"))
 {
- writestock(served-1);
+  writestock(food);
   happy_dog.visible = true;
   dog.visible = false;
 
@@ -46,18 +46,17 @@ if (keyDown("UP_ARROW"))
  text("Note: Press up arrow key to feed dog",100,50);
    //add styles here
 }
-function readStock(){
- foodS= database.ref('food');
- foodS.on("value",function(data)
- {
-   food = data.val();
- })  
+function readStock(data){
+   food = data.val(); 
 }
 function writeStock(x){
- 
- database.ref('/').set({
+ if (x<= 0){
+  x = 0;
+ }
+ else{
+  x = x-1;
+ }
+ database.ref('/').update({
    food:x
  })
- served = food;
-
 }
