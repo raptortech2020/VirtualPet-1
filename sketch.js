@@ -24,7 +24,7 @@ function setup() {
  happy_dog.scale = 0.5;
  happy_dog.visible = false;
 
- foodStock = database.ref("food");
+ foodStock = database.ref('food');
  foodStock.on("value",readStock);
 }
 
@@ -47,7 +47,7 @@ if (keyDown("UP_ARROW"))
    //add styles here
 }
 function readStock(){
- foodS= database.ref("food");
+ foodS= database.ref('food');
  foodS.on("value",function(data)
  {
    food = data.val();
@@ -55,7 +55,7 @@ function readStock(){
 }
 function writeStock(x){
  
- database.ref("/").set({
+ database.ref('/').set({
    food:x
  })
  served = food;
